@@ -9,3 +9,4 @@ name = "mlm"
 path = "src/lib.rs"
 
 [dependencies]
+plotlib = "0.3.0"
