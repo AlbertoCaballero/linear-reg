@@ -1,4 +1,4 @@
-use utils::stat;
+use crate::utils::stat;
 
 pub struct LinearRegression {
     pub coefficient: Option<f32>,
@@ -31,7 +31,7 @@ impl LinearRegression {
         return b0 + b1 * x;
     }
 
-    pub fn predict_list(&self, x_vals: &Vec<f32>) -> {
+    pub fn predict_list(&self, x_vals: &Vec<f32>) -> Vec<f32> {
         let mut predictions = Vec::new();
 
         for i in 0..x_vals.len() {
@@ -41,7 +41,7 @@ impl LinearRegression {
         return predictions;
     }
 
-    fn root_mean_squared_error(&self, actual: &Vec<f32>, predicted: &Vec<f32>) -> {
+    fn root_mean_squared_error(&self, actual: &Vec<f32>, predicted: &Vec<f32>) -> f32 {
         let mut sum_error = 0f32;
         let length = actual.len();
 

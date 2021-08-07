@@ -1,3 +1,5 @@
+use mlm::reg::linear_reg;
+
 fn main() {
-    println!("Hello, world!");
+    let mut model = linear_reg::LinearRegression::new();
 }

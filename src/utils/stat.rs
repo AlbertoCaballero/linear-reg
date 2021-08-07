@@ -1,4 +1,4 @@
-pub fn mean(values: &Vec<f32>) -> {
+pub fn mean(values: &Vec<f32>) -> f32 {
     if values.len() == 0 {
         return 0f32;
     }
@@ -21,7 +21,7 @@ pub fn covariance(x_vals: &Vec<f32>, y_vals: &Vec<f32>) -> f32 {
         panic!("x_vals and y_vals must be of equal length.");
     }
 
-    let lenght usize = x_vals.len();
+    let lenght: usize = x_vals.len();
 
     if lenght == 0usize {
         return 0f32;
